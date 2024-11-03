@@ -1,8 +1,14 @@
 package com.ndk.lldpractice;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Main {
 
+    private static final Logger logger = LogManager.getLogger(Main.class);
+
     public static void main(String[] args) {
-        System.out.println("Arch = " + System.getProperty("os.arch"));
+        logger.info("test message 1");
+        logger.info("test message 2");
     }
 }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="LogInJson" target="SYSTEM_OUT">
+            <JsonLayout complete="false" compact="false">
+            </JsonLayout>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="LogInJson"/>
+        </Root>
+    </Loggers>
+</Configuration>
