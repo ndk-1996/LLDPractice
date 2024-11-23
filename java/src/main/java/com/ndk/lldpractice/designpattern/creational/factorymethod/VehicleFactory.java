@@ -1,16 +1,18 @@
 package com.ndk.lldpractice.designpattern.creational.factorymethod;
 
+import java.util.Objects;
+
 public class VehicleFactory {
 
-    public Vehicle getInstance(String type) {
-        if (type.equals("Car")) {
+    public Vehicle createInstance(String type) {
+        if (Objects.equals("Car", type)) {
             return new Car();
-        } else if (type.equals("Motorcycle")) {
+        } else if (Objects.equals("Motorcycle", type)) {
             return new Motorcycle();
-        } else if (type.equals("Truck")) {
+        } else if (Objects.equals("Truck", type)) {
             return new Truck();
         }
 
-        throw new RuntimeException("unsupported vehicle type");
+        throw new VehicleFactoryException("Unsupported vehicle type, cannot create vehicle instance");
     }
 }

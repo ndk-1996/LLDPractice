@@ -8,15 +8,15 @@ public class RunExamples {
     private static final Logger logger = LogManager.getLogger(RunExamples.class);
 
     public static void main(String[] args) {
-        logger.info("Executing factory method examples");
+        logger.info("Executing factory method pattern examples");
         VehicleFactory vehicleFactory = new VehicleFactory();
-        Vehicle vehicle = vehicleFactory.getInstance("Car");
+        Vehicle vehicle = vehicleFactory.createInstance("Car");
         vehicle.park();
 
-        vehicle = vehicleFactory.getInstance("Motorcycle");
+        vehicle = vehicleFactory.createInstance("Motorcycle");
         vehicle.park();
 
-        vehicle = vehicleFactory.getInstance("Truck");
+        vehicle = vehicleFactory.createInstance("Truck");
         vehicle.park();
     }
 }
