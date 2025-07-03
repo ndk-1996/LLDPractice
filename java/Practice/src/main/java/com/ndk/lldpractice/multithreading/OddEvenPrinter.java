@@ -1,0 +1,21 @@
+package com.ndk.lldpractice.multithreading;
+
+public class OddEvenPrinter {
+
+    public static volatile int num = 0;
+    private static int MAX_NUM = 1000000000;
+
+    public static final Object lock = new Object();
+
+    public static void main(String[] args) {
+        Thread oddPrinter = new OddPrinter();
+        Thread evenPrinter = new EvenPrinter();
+
+        oddPrinter.start();
+        evenPrinter.start();
+    }
+
+    public static int getMaxNum() {
+        return MAX_NUM;
+    }
+}
