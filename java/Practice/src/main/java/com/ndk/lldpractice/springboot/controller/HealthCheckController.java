@@ -1,16 +1,14 @@
-package com.ndk.lldpractice.springboot;
+package com.ndk.lldpractice.springboot.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.lang.annotation.Annotation;
-
 @RestController
-@RequestMapping("/api")
-public class UserController {
+@RequestMapping("/v1/api/health")
+public class HealthCheckController {
 
-    @GetMapping("/health")
+    @GetMapping("/")
     public String healthCheck() {
         return "Hello, health check success";
     }

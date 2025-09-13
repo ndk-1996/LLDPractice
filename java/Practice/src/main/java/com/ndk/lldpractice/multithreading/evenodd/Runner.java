@@ -1,6 +1,6 @@
-package com.ndk.lldpractice.multithreading;
+package com.ndk.lldpractice.multithreading.evenodd;
 
-public class OddEvenPrinter {
+public class Runner {
 
     public static volatile int num = 0;
     private static int MAX_NUM = 1000000000;
