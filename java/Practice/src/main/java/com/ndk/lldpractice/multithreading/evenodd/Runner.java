@@ -7,12 +7,15 @@ public class Runner {
 
     public static final Object lock = new Object();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Thread oddPrinter = new OddPrinter();
         Thread evenPrinter = new EvenPrinter();
 
         oddPrinter.start();
         evenPrinter.start();
+
+        oddPrinter.join();
+        evenPrinter.join();
     }
 
     public static int getMaxNum() {

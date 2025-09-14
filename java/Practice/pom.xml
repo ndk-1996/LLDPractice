@@ -30,11 +30,25 @@
         <jackson.version>2.18.1</jackson.version>
         <pdfbox.version>2.0.34</pdfbox.version>
         <springdoc-openapi.version>2.8.12</springdoc-openapi.version>
+        <commons-lang3.version>3.18.0</commons-lang3.version>
+        <google-guava-bom.version>33.4.8-jre</google-guava-bom.version>
         <!-- dependencies end -->
 
         <!-- plugins start -->
         <!-- plugins end -->
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava-bom</artifactId>
+                <version>${google-guava-bom.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <dependency>
@@ -70,6 +84,17 @@
             <groupId>org.apache.pdfbox</groupId>
             <artifactId>pdfbox</artifactId>
             <version>${pdfbox.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
         </dependency>
 
         <dependency>
