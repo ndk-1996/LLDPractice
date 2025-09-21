@@ -1,9 +1,19 @@
 package com.ndk.lldpractice.problems;
 
-import java.util.Deque;
 import java.util.LinkedHashMap;
 
 public class LRUCache {
 
-    // with and without expiry
+    private LinkedHashMap<String, String> cache = new LinkedHashMap<>();
+
+    public String get(String key) {
+        return cache.get(key);
+    }
+
+    public void put(String key, String value) {
+    }
+
+    public static void main(String[] args) {
+
+    }
 }
